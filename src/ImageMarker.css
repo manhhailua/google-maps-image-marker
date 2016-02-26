@@ -1,0 +1,39 @@
+.image-marker {
+    position: absolute;
+    cursor: pointer;
+    background: #9acfea;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -60px;
+    border-radius: 10%;
+    padding: 0;
+    z-index: 100;
+}
+
+.image-marker:hover {
+    background: #f57977;
+}
+
+.image-marker:hover.image-marker:after {
+    border-color: #f57977 transparent;
+}
+
+.image-marker:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #9acfea transparent;
+    display: block;
+    width: 0;
+}
+
+.image-marker img {
+    width: 46px;
+    height: 46px;
+    margin: 2px;
+    border-radius: 10%;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current location</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="../src/ImageMarker.css">
+</head>
+<body>
+<div id="map"></div>
+<script>
+    var map = null;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 21.030427, lng: 105.7752978},
+            zoom: 14
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNy9w_RlvFTOgdITKjHZlLes0q0tO_oms&callback=initMap"></script>
+<script src="../src/ImageMarker.js"></script>
+<script>
+    var marker = new ImageMarker(
+            new google.maps.LatLng(21.030427, 105.7752978),
+            map,
+            'https://avatars3.githubusercontent.com/u/3754261?v=3&s=460',
+            'friend-image-marker'
+    );
+</script>
+</body>
+</html>
