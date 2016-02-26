@@ -16,6 +16,19 @@
         }
     </style>
     <link rel="stylesheet" href="../src/ImageMarker.css">
+    <style>
+        .friend-image-marker {
+            background-color: #EAC313;
+        }
+
+        .friend-image-marker:after {
+            border-color: #EAC313 transparent;
+        }
+
+        .friend-image-marker:hover.friend-image-marker:after {
+            border-color: #f57977 transparent;
+        }
+    </style>
 </head>
 <body>
 <div id="map"></div>
@@ -31,10 +44,17 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNy9w_RlvFTOgdITKjHZlLes0q0tO_oms&callback=initMap"></script>
 <script src="../src/ImageMarker.js"></script>
 <script>
-    var marker = new ImageMarker(
+    var myMarker = new ImageMarker(
             new google.maps.LatLng(21.030427, 105.7752978),
             map,
             'https://avatars3.githubusercontent.com/u/3754261?v=3&s=460',
+            'my-image-marker'
+    );
+
+    var friendMarker = new ImageMarker(
+            new google.maps.LatLng(21.0285862, 105.783008),
+            map,
+            'https://avatars0.githubusercontent.com/u/3844796?v=3&s=460',
             'friend-image-marker'
     );
 </script>
